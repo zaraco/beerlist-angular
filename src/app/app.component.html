@@ -1,0 +1,3 @@
+<div *ngIf="beers$ | async as beers" class="beers">
+  <app-beer-item *ngFor="let beer of beers" [beer]="beer"></app-beer-item>
+</div>

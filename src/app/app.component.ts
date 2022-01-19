@@ -6,12 +6,7 @@ import { BeerService } from './service/beer.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
+  beers$ = this.beerService.beerList();
   constructor(private beerService: BeerService) {}
-
-  ngOnInit(): void {
-    this.beerService.beerList().subscribe((value) => {
-      console.log(value);
-    });
-  }
 }
