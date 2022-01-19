@@ -1,7 +1,10 @@
-<div *ngIf="beer" class="beer">
-  <p class="beer__id">{{ beer.id }}</p>
-  <h2 class="beer__name">{{ beer.name }}</h2>
-  <img [src]="beer.image_url" class="beer__img" />
-  <p class="beer__tagline">{{ beer.tagline }}</p>
-  <p class="beer__description">{{ beer.description }}</p>
-</div>
+<mat-card *ngIf="beer" class="beer">
+  <mat-card-title class="beer__name">{{ beer.name }}</mat-card-title>
+  <img mat-card-image [src]="beer.image_url" class="beer__img" />
+  <mat-card-subtitle class="beer__tagline">{{
+    beer.tagline
+  }}</mat-card-subtitle>
+  <mat-card-actions class="beer__button">
+    <button mat-button (click)="openDialog()">Open dialog</button>
+  </mat-card-actions>
+</mat-card>

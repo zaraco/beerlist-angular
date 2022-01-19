@@ -1,0 +1,26 @@
+.beer {
+  width: 300px;
+  margin-bottom: 10px;
+  &__img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+  }
+  &__tagline {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__name {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+  }
+}
